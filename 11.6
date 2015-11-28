@@ -1,0 +1,5 @@
+select loc
+from emps e,depts d
+where e.deptno = d.deptno and hiredate >= all(
+select hiredate from emps)
+/

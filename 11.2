@@ -1,0 +1,7 @@
+select job
+from emps
+where sal <=
+all(select e.sal
+from emps e
+)
+/

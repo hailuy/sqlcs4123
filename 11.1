@@ -1,0 +1,7 @@
+select to_char(hiredate,'Day Ddth Month YY') as weekdayanddate
+from emps
+where sal >= all(
+select e.sal
+from emps e
+)
+/

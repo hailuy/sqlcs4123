@@ -1,0 +1,8 @@
+select sum(sal)
+from emps
+group by deptno 
+having sum(sal) >= all(
+select sum(d.sal)
+from emps d
+group by d.deptno)
+/

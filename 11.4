@@ -1,0 +1,6 @@
+select count (*)
+from emps
+where sal >=(
+select 2 * avg(sal)
+from emps)
+/

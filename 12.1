@@ -1,0 +1,4 @@
+select d.deptno,d.dname
+from emps e,depts d
+where d.deptno = e.deptno and e.hiredate >= ' 01-JAN-1982' and e.hiredate <= '31-DEC-2015'
+/

@@ -1,0 +1,4 @@
+select e.ename,d.dname||' ' ||e.job as dept_job
+from emps e,depts d
+where e.deptno = d.deptno
+/

@@ -1,0 +1,4 @@
+select ename
+from emps e,depts d
+where e.deptno = d.deptno and e.job <> 'CLERK' and d.loc = 'DALLAS'
+/

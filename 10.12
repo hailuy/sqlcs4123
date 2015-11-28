@@ -1,0 +1,4 @@
+SELECT INITCAP(E.ENAME)as ename,', a '", a",LOWER(E.JOB)as job,'plays' "plays",',' ",",INITCAP(E1.ENAME)as ename,', a '", a",lower(E1.JOB)as job
+FROM EMPS E,EMPS E1
+WHERE E.EMPNO > E1.EMPNO AND E.JOB <> 'SALESMAN' AND E1.JOB <> 'SALESMAN'
+/

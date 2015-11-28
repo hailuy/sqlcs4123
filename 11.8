@@ -1,0 +1,12 @@
+select d.loc 
+from depts d
+where d.deptno = (
+select d.deptno
+from emps e,depts d
+where e.deptno = d.deptno
+group by d.deptno
+having count(e.empno) >= all(
+select count(empno)
+from emps
+group by deptno))
+/

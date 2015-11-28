@@ -1,0 +1,5 @@
+select e.ename,e.empno,d.loc
+from emps e join depts d
+on e.deptno = d.deptno
+where d.loc = 'NEW YORK' or d.loc = 'DALLAS'
+/

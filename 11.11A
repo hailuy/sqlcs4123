@@ -1,0 +1,7 @@
+select d.dname
+from depts d
+where d.deptno not in (
+select deptno
+from emps
+where emps.job = 'SALESMAN')
+/

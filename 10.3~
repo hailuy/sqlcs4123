@@ -1,0 +1,4 @@
+select e.ename,e.empno,d.loc
+from emps e join depts d
+on e.deptno = d.deptno
+/

@@ -1,0 +1,12 @@
+select deptno,dname
+from depts 
+where deptno = (
+select d.deptno 
+from emps e,depts d 
+where e.deptno = d.deptno 
+group by d.deptno 
+having avg(sal) >= all(
+select avg(sal) 
+from emps 
+group by deptno))
+/

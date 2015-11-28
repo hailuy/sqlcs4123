@@ -1,0 +1,10 @@
+select e.ename as mgrwhohasthemostemps
+from emps e
+where e.empno = (
+select mgr
+from emps
+group by mgr
+having count(*) >= all(
+select count(*)
+from emps
+group by mgr)

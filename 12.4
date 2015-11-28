@@ -1,0 +1,6 @@
+select hiredate
+from emps e
+where e.sal >= all(
+select sal
+from emps)
+/

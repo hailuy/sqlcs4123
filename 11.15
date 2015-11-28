@@ -1,0 +1,7 @@
+select ename
+from emps e
+where e.job <> 'CLERK' and e.deptno = (
+select deptno 
+from depts
+where loc = 'DALLAS')
+/

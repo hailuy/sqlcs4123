@@ -1,0 +1,8 @@
+select mgr as mgrHasTheMostEmployees
+from emps
+group by mgr
+having count(*) >= all(
+select count(*)
+from emps
+group by mgr)
+/

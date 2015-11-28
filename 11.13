@@ -1,0 +1,7 @@
+select ename,empno
+from emps
+where comm is not null and comm <= all(
+select comm 
+from emps
+where comm is not null)
+/

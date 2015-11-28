@@ -1,0 +1,5 @@
+select d.loc,sum(e.sal)as total
+from emps e,depts d
+where e.deptno = d.deptno
+group by d.loc
+/

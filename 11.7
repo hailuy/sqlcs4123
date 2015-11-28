@@ -1,0 +1,9 @@
+select sum(sal) as biggestsalarybill
+from emps,depts
+where emps.deptno = depts.deptno 
+group by emps.deptno 
+having sum(sal) >=(
+select max(sum(sal)) 
+from emps e
+group by e.deptno)
+/
